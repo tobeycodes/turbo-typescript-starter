@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/evilmartians/lefthook/master/schema.json",
+	"commit-msg": {
+		"jobs": [
+			{
+				"name": "commitlint",
+				"run": "bun commitlint --edit {1}"
+			},
+			{
+				"name": "spell-check",
+				"run": "bun cspell --no-summary --no-progress --language-id $1"
+			}
+		],
+		"parallel": true
+	},
+	"output": ["success", "failure"],
+	"pre-commit": {
+		"jobs": [
+			{
+				"name": "check-types",
+				"run": "bun run check-types"
+			},
+			{
+				"name": "editorconfig-checker",
+				"run": "bun editorconfig-checker"
+			},
+			{
+				"name": "lint",
+				"run": "bun lint --write",
+				"stage_fixed": true
+			},
+			{
+				"name": "spell-check",
+				"run": "bun cspell ."
+			},
+			{
+				"name": "syncpack",
+				"run": "bun syncpack lint"
+			},
+			{
+				"name": "test",
+				"run": "bun run test run"
+			},
+			{
+				"name": "validate-branch-name",
+				"run": "bun validate-branch-name"
+			}
+		],
+		"parallel": true
+	},
+	"pre-push": {
+		"jobs": [
+			{
+				"name": "audit",
+				"run": "bun audit"
+			}
+		],
+		"parallel": true
+	}
+}

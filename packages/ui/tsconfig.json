@@ -1,0 +1,11 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "dist",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"extends": "@repo/config-typescript/react"
+}

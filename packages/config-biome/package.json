@@ -1,0 +1,11 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"exports": {
+		"./base": "./base.json"
+	},
+	"name": "@repo/config-biome",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"version": "0.0.0"
+}

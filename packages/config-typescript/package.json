@@ -1,0 +1,12 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"exports": {
+		"./base": "./base.json",
+		"./react": "./react.json"
+	},
+	"name": "@repo/config-typescript",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"version": "0.0.0"
+}

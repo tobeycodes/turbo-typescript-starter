@@ -1,0 +1,44 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"devDependencies": {
+		"@biomejs/biome": "2.3.11",
+		"@commitlint/cli": "20.3.1",
+		"@commitlint/config-conventional": "20.3.1",
+		"@commitlint/types": "20.3.1",
+		"@repo/config-biome": "workspace:*",
+		"@vitest/coverage-v8": "4.0.17",
+		"@vitest/ui": "4.0.17",
+		"cspell": "9.6.0",
+		"editorconfig-checker": "6.1.1",
+		"lefthook": "2.0.15",
+		"only-allow": "1.2.2",
+		"rimraf": "6.1.2",
+		"syncpack": "14.0.0-alpha.37",
+		"turbo": "2.7.5",
+		"validate-branch-name": "1.3.2",
+		"vitest": "4.0.17"
+	},
+	"engines": {
+		"bun": "1.3.6",
+		"node": "24.13.0"
+	},
+	"name": "repo",
+	"packageManager": "bun@1.3.6",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"check-types": "turbo check-types",
+		"clean": "rimraf .tanstack .turbo dist node_modules",
+		"coverage": "vitest run --coverage",
+		"dev": "turbo dev",
+		"lint": "biome check --error-on-warnings",
+		"preinstall": "only-allow bun",
+		"prepare": "lefthook install",
+		"test": "vitest"
+	},
+	"type": "module",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
+}

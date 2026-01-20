@@ -1,0 +1,31 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"dependencies": {
+		"@repo/ui": "workspace:*",
+		"@tanstack/react-router": "1.150.0",
+		"@tanstack/react-start": "1.150.0",
+		"react": "19.2.3",
+		"react-dom": "19.2.3"
+	},
+	"devDependencies": {
+		"@repo/config-tailwind": "workspace:*",
+		"@repo/config-typescript": "workspace:*",
+		"@tailwindcss/vite": "4.1.18",
+		"@types/node": "25.0.9",
+		"@types/react": "19.2.8",
+		"@types/react-dom": "19.2.3",
+		"@vitejs/plugin-react": "5.1.2",
+		"typescript": "5.9.3",
+		"vite": "7.3.1",
+		"vite-tsconfig-paths": "6.0.4"
+	},
+	"name": "@repo/web",
+	"private": true,
+	"scripts": {
+		"build": "vite build",
+		"check-types": "tsc --noEmit",
+		"dev": "vite dev"
+	},
+	"type": "module",
+	"version": "0.0.0"
+}
