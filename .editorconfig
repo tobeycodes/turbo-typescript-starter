@@ -12,3 +12,6 @@ max_line_length = 100
 
 [*.yaml]
 indent_style = space
+
+[*.tsx]
+max_line_length = off
