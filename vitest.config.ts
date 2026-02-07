@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
 
-export default defineConfig({
+const config = defineConfig({
 	test: {
 		coverage: {
 			enabled: true,
@@ -10,3 +10,5 @@ export default defineConfig({
 		projects: ["apps/*", "packages/*"],
 	},
 });
+
+export default config;
