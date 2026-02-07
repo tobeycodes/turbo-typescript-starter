@@ -13,6 +13,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+
+      - name: install dependencies
+        uses: ./.github/workflows/actions/install-dependencies
+
+      - name: Audit
+        run: bun audit
+
   build:
     runs-on: ubuntu-latest
     steps:
