@@ -19,11 +19,11 @@
 		"vitest": "4.0.18"
 	},
 	"engines": {
-		"bun": "1.3.6",
+		"bun": "1.3.9",
 		"node": "24.13.0"
 	},
 	"name": "repo",
-	"packageManager": "bun@1.3.6",
+	"packageManager": "bun@1.3.9",
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
